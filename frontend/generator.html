@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator - Create Amazing Images</title>
+  <link rel="stylesheet" href="generator.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1><i class="fas fa-magic"></i> AI Image Generator</h1>
+      <p>Transform your ideas into stunning images with AI</p>
+    </header>
+
+    <main class="main-content">
+      <div class="generator-panel">
+        <div class="input-section">
+          <div class="prompt-container">
+            <label for="prompt">Describe your image:</label>
+            <textarea 
+              id="prompt" 
+              placeholder="Enter a detailed description of the image you want to generate... (e.g., 'A majestic dragon flying over a medieval castle at sunset')"
+              rows="3"
+            ></textarea>
+            <div class="prompt-actions">
+              <button class="clear-btn" onclick="clearPrompt()">
+                <i class="fas fa-eraser"></i> Clear
+              </button>
+              <span class="char-count" id="charCount">0</span>
+            </div>
+          </div>
+
+          <div class="options-section">
+            <div class="option-group">
+              <label for="style">Style:</label>
+              <select id="style">
+                <option value="realistic">Realistic</option>
+                <option value="artistic">Artistic</option>
+                <option value="cartoon">Cartoon</option>
+                <option value="abstract">Abstract</option>
+              </select>
+            </div>
+
+            <div class="option-group">
+              <label for="size">Size:</label>
+              <select id="size">
+                <option value="1024x1024">Square (1024x1024)</option>
+                <option value="1024x768">Landscape (1024x768)</option>
+                <option value="768x1024">Portrait (768x1024)</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="generate-btn" onclick="generateImage()" id="generateBtn">
+            <i class="fas fa-wand-magic-sparkles"></i> Generate Image
+          </button>
+        </div>
+
+        <div class="result-section" id="resultSection">
+          <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Creating your masterpiece...</p>
+          </div>
+
+          <div class="result-container" id="resultContainer">
+            <div class="placeholder">
+              <i class="fas fa-image"></i>
+              <p>Your generated image will appear here</p>
+            </div>
+          </div>
+
+          <div class="download-section" id="downloadSection" style="display: none;">
+            <h3>Download Options</h3>
+            <div class="download-buttons">
+              <button onclick="downloadImage('png')" class="download-btn">
+                <i class="fas fa-download"></i> PNG
+              </button>
+              <button onclick="downloadImage('jpg')" class="download-btn">
+                <i class="fas fa-download"></i> JPG
+              </button>
+              <button onclick="downloadPDF()" class="download-btn">
+                <i class="fas fa-file-pdf"></i> PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <h3>Recent Generations</h3>
+        <div class="gallery" id="gallery">
+          <!-- Generated images will be stored here -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 AI Image Generator. Powered by ClipDrop API.</p>
+    </footer>
+  </div>
+
+  <!-- Error Modal -->
+  <div class="modal" id="errorModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Error</h3>
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
