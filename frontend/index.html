@@ -19,10 +19,10 @@
           Transform your ideas into stunning images with the power of artificial intelligence
         </p>
         <div class="hero-buttons">
-          <a href="generator.html" class="btn btn-primary">
+          <button onclick="showAuthModal()" class="btn btn-primary">
             <i class="fas fa-wand-magic-sparkles"></i>
             Start Creating
-          </a>
+          </button>
           <a href="#features" class="btn btn-secondary">
             <i class="fas fa-info-circle"></i>
             Learn More
@@ -32,7 +32,7 @@
       <div class="hero-image">
         <img src="image.webp" alt="AI Generated Art" class="floating-image">
       </div>
-  </header>
+    </header>
 
     <main>
       <section id="features" class="features">
@@ -108,12 +108,12 @@
         <div class="cta-content">
           <h2>Ready to Create Something Amazing?</h2>
           <p>Join thousands of creators who are already using AI to bring their ideas to life</p>
-          <a href="generator.html" class="btn btn-primary btn-large">
+          <button onclick="showAuthModal()" class="btn btn-primary btn-large">
             <i class="fas fa-rocket"></i>
             Start Creating Now
-          </a>
-    </div>
-  </section>
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -153,6 +153,66 @@
     </footer>
   </div>
 
+  <!-- Authentication Modal -->
+  <div class="modal-overlay" id="authModal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-magic"></i> Choose Your Path</h2>
+        <p>Select how you'd like to access the AI Image Generator</p>
+        <button class="close-btn" onclick="closeModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="auth-options">
+        <div class="auth-option" onclick="goToSignup()">
+          <div class="option-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>Sign Up</h3>
+          <p>Create a new account to save your generated images and track your progress</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> Save images to gallery</span>
+            <span><i class="fas fa-check"></i> Track generation history</span>
+            <span><i class="fas fa-check"></i> Access from any device</span>
+          </div>
+        </div>
+
+        <div class="auth-option" onclick="goToLogin()">
+          <div class="option-icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3>Sign In</h3>
+          <p>Welcome back! Sign in to your existing account</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> Access your saved images</span>
+            <span><i class="fas fa-check"></i> Continue where you left off</span>
+            <span><i class="fas fa-check"></i> Sync across devices</span>
+          </div>
+        </div>
+
+        <div class="auth-option guest-option" onclick="loginAsGuest()">
+          <div class="option-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <h3>Continue as Guest</h3>
+          <p>Start creating immediately without an account</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> No registration required</span>
+            <span><i class="fas fa-check"></i> Generate images instantly</span>
+            <span><i class="fas fa-info-circle"></i> Images won't be saved</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <p>By continuing, you agree to our <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="auth-modal.js"></script>
   <script>
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
