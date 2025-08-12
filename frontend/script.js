@@ -73,7 +73,7 @@ function clearPrompt() {
 async function generateImage() {
     const prompt = promptInput.value.trim();
     
-    if (!prompt) {
+  if (!prompt) {
         showError('Please enter a description for your image!');
         return;
     }
@@ -84,18 +84,18 @@ async function generateImage() {
     }
     
     if (isGenerating) {
-        return;
-    }
-    
+    return;
+  }
+
     isGenerating = true;
     setGeneratingState(true);
-    
-    try {
+
+  try {
         const style = document.getElementById('style').value;
         const size = document.getElementById('size').value;
         
         const response = await fetch('http://localhost:3000/generate', {
-            method: 'POST',
+      method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -104,19 +104,19 @@ async function generateImage() {
                 style, 
                 size 
             })
-        });
-        
-        const data = await response.json();
+    });
+
+    const data = await response.json();
         
         if (!response.ok) {
             throw new Error(data.error || 'Failed to generate image');
         }
         
-        if (data.image) {
+  if (data.image) {
             displayResult(data.image, prompt, data.timestamp);
             addToGallery(data.image, prompt, data.timestamp);
             saveToLocalStorage(data.image, prompt, data.timestamp);
-        } else {
+} else {
             throw new Error('No image data received');
         }
         

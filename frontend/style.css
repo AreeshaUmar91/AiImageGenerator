@@ -91,14 +91,14 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-  color: #333;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
 }
 
 .btn-secondary {
@@ -145,15 +145,18 @@ body {
 /* Features Section */
 .features {
   padding: 100px 0;
-  background: #f8f9fa;
-  width: 100%;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  color: white;
 }
 
 .features h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: #333;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .features-grid {
@@ -164,24 +167,26 @@ body {
 }
 
 .feature-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.15);
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -197,26 +202,29 @@ body {
 .feature-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #333;
+  color: white;
 }
 
 .feature-card p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
 }
 
 /* How It Works Section */
 .how-it-works {
   padding: 100px 0;
-  background: white;
-  width: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  color: white;
 }
 
 .how-it-works h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: #333;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .steps {
@@ -235,7 +243,7 @@ body {
 .step-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -244,23 +252,24 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 20px;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
 }
 
 .step h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #333;
+  color: white;
 }
 
 .step p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
   color: white;
   text-align: center;
   width: 100vw;
@@ -270,6 +279,7 @@ body {
 .cta-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .cta-content p {
@@ -283,10 +293,11 @@ body {
 
 /* Footer */
 .footer {
-  background: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 60px 0 20px;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .footer-content {
@@ -303,7 +314,7 @@ body {
 }
 
 .footer-section p {
-  color: #bdc3c7;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
 }
 
@@ -316,13 +327,13 @@ body {
 }
 
 .footer-section ul li a {
-  color: #bdc3c7;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #3498db;
+  color: #ff6b6b;
 }
 
 .social-links {
@@ -333,7 +344,7 @@ body {
 .social-links a {
   width: 40px;
   height: 40px;
-  background: #34495e;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -341,18 +352,19 @@ body {
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .social-links a:hover {
-  background: #3498db;
+  background: #ff6b6b;
   transform: translateY(-2px);
 }
 
 .footer-bottom {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 20px;
   text-align: center;
-  color: #bdc3c7;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Animations */
