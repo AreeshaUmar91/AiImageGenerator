@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication - AI Image Generator</title>
+  <link rel="stylesheet" href="auth-modal.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-magic"></i> Choose Your Path</h2>
+        <p>Select how you'd like to access the AI Image Generator</p>
+        <button class="close-btn" onclick="closeModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="auth-options">
+        <div class="auth-option" onclick="goToSignup()">
+          <div class="option-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>Sign Up</h3>
+          <p>Create a new account to save your generated images and track your progress</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> Save images to gallery</span>
+            <span><i class="fas fa-check"></i> Track generation history</span>
+            <span><i class="fas fa-check"></i> Access from any device</span>
+          </div>
+        </div>
+
+        <div class="auth-option" onclick="goToLogin()">
+          <div class="option-icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3>Sign In</h3>
+          <p>Welcome back! Sign in to your existing account</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> Access your saved images</span>
+            <span><i class="fas fa-check"></i> Continue where you left off</span>
+            <span><i class="fas fa-check"></i> Sync across devices</span>
+          </div>
+        </div>
+
+        <div class="auth-option guest-option" onclick="loginAsGuest()">
+          <div class="option-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <h3>Continue as Guest</h3>
+          <p>Start creating immediately without an account</p>
+          <div class="option-features">
+            <span><i class="fas fa-check"></i> No registration required</span>
+            <span><i class="fas fa-check"></i> Generate images instantly</span>
+            <span><i class="fas fa-info-circle"></i> Images won't be saved</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <p>By continuing, you agree to our <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth-modal.js"></script>
+</body>
+</html>
